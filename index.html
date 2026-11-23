@@ -112,3 +112,670 @@
       color: var(--teal);
       border: 1px solid rgba(79, 209, 197, 0.35);
     }
+
+    .time-display {
+      font-size: clamp(3.4rem, 11vw, 5.2rem);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      text-shadow: 0 0 24px rgba(212, 175, 55, 0.25);
+      line-height: 1.1;
+      margin: 6px 0 18px;
+    }
+
+    .main-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.08s ease, background-color 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background-color: var(--gold);
+      color: #111318;
+      font-size: 1.05rem;
+      padding: 12px 32px;
+      min-width: 140px;
+    }
+
+    .btn-primary:hover {
+      background-color: #e2be46;
+    }
+
+    .btn-primary.paused {
+      background-color: var(--teal);
+      color: #0d1015;
+    }
+
+    .btn-secondary {
+      background-color: #283244;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: #323f54;
+    }
+
+    .adjust-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .adjust-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    .btn-adjust {
+      background-color: rgba(255, 255, 255, 0.06);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-adjust:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: var(--gold-dim);
+    }
+
+    .hint-box {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* 音声設定バー */
+    .voice-bar {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .voice-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .voice-controls label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="range"] {
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .btn-test {
+      background-color: transparent;
+      color: var(--teal);
+      border: 1px solid var(--teal);
+      font-size: 0.82rem;
+      padding: 6px 12px;
+    }
+
+    .btn-test:hover {
+      background-color: var(--teal-dim);
+    }
+
+    /* 直近ログ表示 */
+    .announce-log {
+      background-color: var(--bg-secondary);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .announce-log span.label {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .announce-log span.text {
+      color: var(--text-main);
+      flex: 1;
+    }
+
+    /* 通知イベントリスト */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-size: 1.05rem;
+      color: var(--gold);
+    }
+
+    .bulk-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-mini {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      font-size: 0.78rem;
+      padding: 4px 10px;
+    }
+
+    .btn-mini:hover {
+      color: var(--text-main);
+      border-color: var(--text-muted);
+    }
+
+    .event-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .event-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 13px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+      user-select: none;
+    }
+
+    .event-card:hover {
+      background-color: var(--bg-card-hover);
+    }
+
+    .event-card.disabled {
+      opacity: 0.48;
+    }
+
+    .event-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .event-left input[type="checkbox"] {
+      width: 19px;
+      height: 19px;
+      accent-color: var(--gold);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .event-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .event-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .event-timing {
+      text-align: right;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .event-timing .pre {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      padding-top: 16px;
+      width: 100%;
+      max-width: 720px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DEADLOCK 音声タイマー</h1>
+      <p>オブジェクト出現＆30秒前 日本語ボイスアラート</p>
+    </header>
+
+    <!-- タイマー本体 -->
+    <section class="timer-panel">
+      <div id="statusBadge" class="status-badge">待機中</div>
+      <div id="timeDisplay" class="time-display">00:00</div>
+
+      <div class="main-controls">
+        <button id="startPauseBtn" class="btn-primary">開始</button>
+        <button id="resetBtn" class="btn-secondary">リセット</button>
+      </div>
+
+      <div class="adjust-controls">
+        <span class="adjust-label">試合時間ズレ調整:</span>
+        <button class="btn-adjust" data-delta="-60">-60秒</button>
+        <button class="btn-adjust" data-delta="-10">-10秒</button>
+        <button class="btn-adjust" data-delta="-1">-1秒</button>
+        <button class="btn-adjust" data-delta="1">+1秒</button>
+        <button class="btn-adjust" data-delta="10">+10秒</button>
+        <button class="btn-adjust" data-delta="60">+60秒</button>
+      </div>
+
+      <div class="hint-box">
+        💡 <strong>使い方:</strong> 試合開始（0:00）と同時に「開始」を押してください。押し遅れた場合は「+1秒」「+10秒」「+60秒」ボタンでゲーム内時計と同期できます。スマホ利用時は画面の自動スリープをオフにしておくことをおすすめします。
+      </div>
+    </section>
+
+    <!-- 音声コントロール -->
+    <section class="voice-bar">
+      <div class="voice-controls">
+        <label>
+          音量
+          <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1" />
+        </label>
+        <label>
+          速度
+          <input id="rateSlider" type="range" min="0.8" max="1.4" step="0.05" value="1.1" />
+        </label>
+      </div>
+      <button id="testVoiceBtn" class="btn-test">🔊 音声テスト</button>
+    </section>
+
+    <!-- 直近の通知メッセージ -->
+    <div class="announce-log">
+      <span class="label">最新通知</span>
+      <span id="lastMessage" class="text">「開始」を押すとカウントアップと音声通知が始まります。</span>
+    </div>
+
+    <!-- 通知項目チェックリスト -->
+    <section>
+      <div class="section-header">
+        <h2>通知スケジュール（個別ON / OFF）</h2>
+        <div class="bulk-actions">
+          <button id="selectAllBtn" class="btn-mini">すべてON</button>
+          <button id="deselectAllBtn" class="btn-mini">すべてOFF</button>
+        </div>
+      </div>
+      <div id="eventList" class="event-list"></div>
+    </section>
+  </div>
+
+  <footer>
+    本ツールは『Deadlock』の非公式ファンメイドツールです。Valve Corporationとは一切関係ありません。
+  </footer>
+
+  <script>
+    // 通知イベント定義
+    const EVENT_DEFINITIONS = [
+      {
+        id: "t1_neutral",
+        name: "T1中立",
+        desc: "2:00 出現（1回のみ）",
+        timingMain: "2:00",
+        timingPre: "予告 1:30",
+        enabled: true,
+        isWarning: (t) => t === 90,
+        isSpawn: (t) => t === 120
+      },
+      {
+        id: "boxes",
+        name: "箱出現",
+        desc: "3:00 出現（1回のみ）",
+        timingMain: "3:00",
+        timingPre: "予告 2:30",
+        enabled: true,
+        isWarning: (t) => t === 150,
+        isSpawn: (t) => t === 180
+      },
+      {
+        id: "t2_neutral",
+        name: "T2中立",
+        desc: "5:00 出現（1回のみ）",
+        timingMain: "5:00",
+        timingPre: "予告 4:30",
+        enabled: true,
+        isWarning: (t) => t === 270,
+        isSpawn: (t) => t === 300
+      },
+      {
+        id: "bridge_buff",
+        name: "橋バフ",
+        desc: "5:00から5分毎に出現",
+        timingMain: "5:00 / 10:00...",
+        timingPre: "予告 4:30 / 9:30...",
+        enabled: true,
+        isWarning: (t) => t >= 270 && (t + 30) % 300 === 0,
+        isSpawn: (t) => t >= 300 && t % 300 === 0
+      },
+      {
+        id: "t3_neutral",
+        name: "T3中立",
+        desc: "8:00 出現（1回のみ）",
+        timingMain: "8:00",
+        timingPre: "予告 7:30",
+        enabled: true,
+        isWarning: (t) => t === 450,
+        isSpawn: (t) => t === 480
+      },
+      {
+        id: "sinners",
+        name: "シナーズ",
+        desc: "8:00 出現（1回のみ）",
+        timingMain: "8:00",
+        timingPre: "予告 7:30",
+        enabled: true,
+        isWarning: (t) => t === 450,
+        isSpawn: (t) => t === 480
+      },
+      {
+        id: "urn",
+        name: "壺",
+        desc: "10:00から5分毎に出現",
+        timingMain: "10:00 / 15:00...",
+        timingPre: "予告 9:30 / 14:30...",
+        enabled: true,
+        isWarning: (t) => t >= 570 && (t + 30) % 300 === 0,
+        isSpawn: (t) => t >= 600 && t % 300 === 0
+      }
+    ];
+
+    // 状態管理
+    let elapsedSeconds = 0;
+    let isRunning = false;
+    let intervalId = null;
+    let startTimestamp = null;
+    let baseElapsed = 0;
+    const triggeredKeys = new Set();
+
+    // DOM要素
+    const timeDisplay = document.getElementById("timeDisplay");
+    const statusBadge = document.getElementById("statusBadge");
+    const startPauseBtn = document.getElementById("startPauseBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const volumeSlider = document.getElementById("volumeSlider");
+    const rateSlider = document.getElementById("rateSlider");
+    const testVoiceBtn = document.getElementById("testVoiceBtn");
+    const lastMessage = document.getElementById("lastMessage");
+    const eventList = document.getElementById("eventList");
+    const selectAllBtn = document.getElementById("selectAllBtn");
+    const deselectAllBtn = document.getElementById("deselectAllBtn");
+
+    // 秒数を MM:SS 形式に変換
+    function formatTime(totalSec) {
+      const mins = Math.floor(totalSec / 60);
+      const secs = totalSec % 60;
+      return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+    }
+
+    // 日本語音声読み上げ
+    function speak(text) {
+      lastMessage.textContent = text;
+      if (!("speechSynthesis" in window)) return;
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "ja-JP";
+      utterance.volume = parseFloat(volumeSlider.value);
+      utterance.rate = parseFloat(rateSlider.value);
+
+      const voices = window.speechSynthesis.getVoices();
+      const jaVoice = voices.find((v) => v.lang && v.lang.includes("ja"));
+      if (jaVoice) utterance.voice = jaVoice;
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // 指定秒数での通知判定・統合読み上げ
+    function checkNotifications(sec) {
+      const warningNames = [];
+      const spawnNames = [];
+
+      for (const ev of EVENT_DEFINITIONS) {
+        if (!ev.enabled) continue;
+
+        if (ev.isWarning(sec)) {
+          const key = `${sec}_warn_${ev.id}`;
+          if (!triggeredKeys.has(key)) {
+            triggeredKeys.add(key);
+            warningNames.push(ev.name);
+          }
+        }
+
+        if (ev.isSpawn(sec)) {
+          const key = `${sec}_spawn_${ev.id}`;
+          if (!triggeredKeys.has(key)) {
+            triggeredKeys.add(key);
+            spawnNames.push(ev.name);
+          }
+        }
+      }
+
+      const messages = [];
+      if (warningNames.length > 0) {
+        messages.push(`まもなく、${warningNames.join("と")}が出現します`);
+      }
+      if (spawnNames.length > 0) {
+        messages.push(`${spawnNames.join("と")}が出現しました`);
+      }
+
+      if (messages.length > 0) {
+        speak(messages.join("。"));
+      }
+    }
+
+    // タイマー更新ループ
+    function tick() {
+      const now = Date.now();
+      const current = baseElapsed + Math.floor((now - startTimestamp) / 1000);
+      if (current !== elapsedSeconds) {
+        elapsedSeconds = current;
+        timeDisplay.textContent = formatTime(elapsedSeconds);
+        checkNotifications(elapsedSeconds);
+      }
+    }
+
+    // 開始 / 一時停止
+    function toggleTimer() {
+      if (!isRunning) {
+        // ブラウザの音声再生制限解除用に空発話 & GA4イベント送信
+        if (elapsedSeconds === 0) {
+          if ("speechSynthesis" in window) {
+            const silent = new SpeechSynthesisUtterance("");
+            silent.volume = 0;
+            window.speechSynthesis.speak(silent);
+          }
+          if (typeof gtag === "function") {
+            gtag("event", "timer_start", {
+              event_category: "timer",
+              event_label: "start_from_zero"
+            });
+          }
+        }
+
+        isRunning = true;
+        baseElapsed = elapsedSeconds;
+        startTimestamp = Date.now();
+        intervalId = setInterval(tick, 200);
+
+        startPauseBtn.textContent = "一時停止";
+        startPauseBtn.classList.add("paused");
+        statusBadge.textContent = "計測中";
+        statusBadge.classList.add("running");
+      } else {
+        isRunning = false;
+        clearInterval(intervalId);
+        intervalId = null;
+
+        startPauseBtn.textContent = "再開";
+        startPauseBtn.classList.remove("paused");
+        statusBadge.textContent = "一時停止中";
+        statusBadge.classList.remove("running");
+      }
+    }
+
+    // リセット
+    function resetTimer() {
+      isRunning = false;
+      clearInterval(intervalId);
+      intervalId = null;
+      elapsedSeconds = 0;
+      baseElapsed = 0;
+      triggeredKeys.clear();
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+
+      timeDisplay.textContent = "00:00";
+      startPauseBtn.textContent = "開始";
+      startPauseBtn.classList.remove("paused");
+      statusBadge.textContent = "待機中";
+      statusBadge.classList.remove("running");
+      lastMessage.textContent = "タイマーをリセットしました。";
+    }
+
+    // 時間微調整（-60s / -10s / -1s / +1s / +10s / +60s）
+    function adjustTime(delta) {
+      const nextSec = Math.max(0, elapsedSeconds + delta);
+      if (nextSec < elapsedSeconds) {
+        // 時間を巻き戻した場合は、その時間以降の通知済みフラグを解除
+        for (const key of Array.from(triggeredKeys)) {
+          const keySec = parseInt(key.split("_")[0], 10);
+          if (keySec >= nextSec) {
+            triggeredKeys.delete(key);
+          }
+        }
+      }
+      elapsedSeconds = nextSec;
+      baseElapsed = nextSec;
+      startTimestamp = Date.now();
+      timeDisplay.textContent = formatTime(elapsedSeconds);
+    }
+
+    // イベントチェックリスト描画
+    function renderEventList() {
+      eventList.innerHTML = "";
+      EVENT_DEFINITIONS.forEach((ev) => {
+        const card = document.createElement("label");
+        card.className = `event-card ${ev.enabled ? "" : "disabled"}`;
+
+        card.innerHTML = `
+          <div class="event-left">
+            <input type="checkbox" ${ev.enabled ? "checked" : ""} />
+            <div>
+              <div class="event-title">${ev.name}</div>
+              <div class="event-desc">${ev.desc}</div>
+            </div>
+          </div>
+          <div class="event-timing">
+            <span>${ev.timingMain}</span>
+            <span class="pre">${ev.timingPre}</span>
+          </div>
+        `;
+
+        const checkbox = card.querySelector("input");
+        checkbox.addEventListener("change", () => {
+          ev.enabled = checkbox.checked;
+          card.classList.toggle("disabled", !ev.enabled);
+        });
+
+        eventList.appendChild(card);
+      });
+    }
+
+    // イベントリスナー登録
+    startPauseBtn.addEventListener("click", toggleTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    document.querySelectorAll(".btn-adjust").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const delta = parseInt(btn.dataset.delta, 10);
+        adjustTime(delta);
+      });
+    });
+
+    testVoiceBtn.addEventListener("click", () => {
+      speak("音声テストです。まもなく、T2中立と橋バフが出現します。");
+    });
+
+    selectAllBtn.addEventListener("click", () => {
+      EVENT_DEFINITIONS.forEach((ev) => (ev.enabled = true));
+      renderEventList();
+    });
+
+    deselectAllBtn.addEventListener("click", () => {
+      EVENT_DEFINITIONS.forEach((ev) => (ev.enabled = false));
+      renderEventList();
+    });
+
+    // 音声リストの事前読み込み（Chrome対策）
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+
+    renderEventList();
+  </script>
+</body>
+</html>
